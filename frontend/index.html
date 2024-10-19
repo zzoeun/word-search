@@ -4,27 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GOOD Word Search</title>
-    <style>
-      table {
-        border-collapse: collapse;
-      }
-      td {
-        width: 30px;
-        height: 30px;
-        text-align: center;
-        border: 1px solid rgb(0, 0, 0);
-        font-size: 20px;
-        background-color: aquamarine;
-      }
-      button {
-        margin-top: 10px;
-        padding: 10px;
-      }
-    </style>
+
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h1>GOOD Word Search</h1>
-    <button id="new-game">New Game</button>
+    <input
+      type="text"
+      id="word-input"
+      placeholder="e.g. apple, banana, orange"
+    /><br />
+    <button id="new-game">Create Word Search</button>
+
     <div id="game-board"></div>
 
     <script src="index.js"></script>
