@@ -9,12 +9,17 @@
   </head>
   <body>
     <h1>GOOD Word Search</h1>
+    <label for="word-input">Enter words(comma-seperated):</label>
     <input
       type="text"
       id="word-input"
       placeholder="e.g. apple, banana, orange"
     /><br />
-    <button id="new-game">Create Word Search</button>
+    <button id="new-game">Game Start!</button>
+    <div id="word-list">
+      <h3>Words to Find:</h3>
+      <ul id="words"></ul>
+    </div>
 
     <div id="game-board"></div>
 

@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.staticfiles import StaticFiles 
 from typing import List
 import random
@@ -88,11 +88,12 @@ def create_word_search(words: List[str]):
 
     return board
 
-@app.get('/wordsearch')
-def get_word_search():
-    words = ["ADVENTURE", "DESTINATION", "PASSPORT", "EXPLORE", "TOURIST", 
-              "JOURNEY", "FLIGHT", "CRUISE", "LUGGAGE", "TICKET"]
+@app.post('/wordsearch')
+async def post_word_search(request: Request):
+    data = await request.json()
+    words = data.get("words", [])
     board = create_word_search(words)
     return {"puzzle": board}
+
 
 app.mount("/", StaticFiles(directory="frontend", html=True), name="frontend")

@@ -9,6 +9,11 @@ td {
   font-size: 20px;
   background-color: aquamarine;
 }
+
+td.selected {
+  background-color: blueviolet;
+}
+
 button {
   margin-top: 10px;
   padding: 10px;
